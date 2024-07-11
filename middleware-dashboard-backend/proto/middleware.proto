@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package middleware;
+
+service InstanceService {
+  rpc StartInstance(Empty) returns (Response);
+  rpc StopInstance(Empty) returns (Response);
+  rpc GetInstanceStatus(Empty) returns (Response);
+}
+
+message Empty {}
+
+message Response {
+  string message = 1;
+}
